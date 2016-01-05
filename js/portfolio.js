@@ -1,10 +1,10 @@
 $(window).load(function () {
 
-	$('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
+	$('html, body').css({ 'overflow': 'hidden', 'height': '100%' });
 
 	$(".loading").delay(3000).fadeOut(500);
 
-	$('html, body').removeAttr('style')
+	$('html, body').removeAttr('style');
 
 	$("section#images").isotope({ filter: ".illustration" });
 
