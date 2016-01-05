@@ -1,6 +1,6 @@
 $(window).load(function () {
 
-	$(".loading").delay(9000).fadeOut(500);
+	$(".loading").delay(6000).fadeOut(500);
 
 	$("section#images").isotope({ filter: ".illustration" });
 
