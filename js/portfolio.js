@@ -24,15 +24,9 @@ $(document).ready(function() {
 
 	});
 
-	$(".reset").on("click", function () {
 
-	$("section#images").isotope({ filter: "*" });
 
-	$("nav a#illustration").fadeOut();
 
-	return false;
-
-	});
 
 		
 
