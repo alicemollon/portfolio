@@ -26,27 +26,24 @@ $(document).ready(function() {
 
 
 
+	//  Lightbox code
+	$("div.illustration img").on("click", function () {
 
+		$("div#lightbox").fadeIn(250);
 
-		
+		var imageSrc = $(this).attr("src");
 
+		$("div#lightbox img").attr("src", imageSrc);
 
+		});
 
-$("div.illustration img").on("click", function () {
-
-	$("div#lightbox").fadeIn(250);
-
-	var imageSrc = $(this).attr("src");
-
-	$("div#lightbox img").attr("src", imageSrc); 
-
+	$("div#lightbox").on("click", function () {
+		$("div#lightbox").fadeOut(250);
 	});
 
-$("div#lightbox").on("click", function () {
-	$("div#lightbox").fadeOut(250);
-});
+}); // End of Doc ready should be used for rest of code
 
-});
+
 
 
 
