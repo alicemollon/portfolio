@@ -64,7 +64,7 @@ div.contact {
 	height: 100%;
 	text-align: center;
 	z-index: 20;
-  	display: none;
+  display: none;
 }
 
 #lightbox > * {
@@ -73,7 +73,6 @@ div.contact {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
 }
 
 
@@ -141,7 +140,6 @@ footer a {
 	}
 
 	.nudge:hover {
-		-webkit-animation: none;
 		box-shadow: none;
 		cursor: default;
 	}
