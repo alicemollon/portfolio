@@ -10,6 +10,7 @@ $(window).load(function () {
 
 
 	var $section = $('#images').isotope({
+$(document).ready(function() {
 
 	})
 
