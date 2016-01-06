@@ -6,10 +6,6 @@ $(window).load(function () {
 
 	$('html, body').removeAttr('style');
 
-}); // End of window load should only be used for loading
-
-$(document).ready(function() {
-
 	// Isotope code
 	$("section#images").isotope({ filter: ".illustration" });
 
@@ -19,21 +15,21 @@ $(document).ready(function() {
 		$("section#images").isotope({ filter: "div." + category });
 
 		return false;
-
 	});
 
+}); // End of window load
 
+$(document).ready(function() {
 
 	//  Lightbox code
-	$("div.illustration img").on("click", function () {
+	$(".illustration .nudge").on("click", function () {
 
 		$("div#lightbox").fadeIn(250);
 
-		var imageSrc = $(this).attr("src");
+		var illustration = $(this).clone().removeClass('nudge')
 
-		$("div#lightbox img").attr("src", imageSrc);
-
-		});
+		$("div#lightbox").html(illustration);
+	});
 
 	$("div#lightbox").on("click", function () {
 		$("div#lightbox").fadeOut(250);
