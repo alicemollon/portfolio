@@ -8,7 +8,6 @@ $(window).load(function () {
 
 }); // End of window load should only be used for loading
 
-	var $section = $('#images').isotope({
 $(document).ready(function() {
 
 	// Isotope code
@@ -18,7 +17,6 @@ $(document).ready(function() {
 
 		var category = $(this).attr("data-category");
 		$("section#images").isotope({ filter: "div." + category });
-
 
 		return false;
 
