@@ -1,25 +1,20 @@
-$(window).load(function () {
+$(document).ready(function() {
 
-	$('html, body').css({ 'overflow': 'hidden', 'height': '100%' });
 
-	$(".loading").delay(3000).fadeOut(500);
+	var is = $("section#images").imagesLoaded()
+	.always(function(){
+		is.isotope({ filter: ".illustration" });
+		is.fadeTo(2000, 1)
+	})
 
-	$('html, body').removeAttr('style');
 
-	// Isotope code
-	$("section#images").isotope({ filter: ".illustration" });
 
 	$("nav a").on("click", function () {
-
 		var category = $(this).attr("data-category");
-		$("section#images").isotope({ filter: "div." + category });
+		is.isotope({ filter: "div." + category });
 
 		return false;
 	});
-
-}); // End of window load
-
-$(document).ready(function() {
 
 	//  Lightbox code
 	$(".illustration .nudge").on("click", function () {
