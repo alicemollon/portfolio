@@ -1,13 +1,8 @@
-$(window).load(function () {
 
-	$('html, body').css({ 'overflow': 'hidden', 'height': '100%' });
 
-	$(".loading").delay(3000).fadeOut(500);
+		is.fadeTo(2000, 1)
 
-	$('html, body').removeAttr('style');
 
-	// Isotope code
-	$("section#images").isotope({ filter: ".illustration" });
 
 	$("nav a").on("click", function () {
 
