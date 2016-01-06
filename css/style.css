@@ -4,7 +4,6 @@
 	height: 100%;
 	z-index: 9999;
 	background: #fff;
-
 }
 
 .loading img {
@@ -38,7 +37,11 @@ nav img {
 	max-width: 960px;
 }
 
-img.nudge:hover {
+video {
+	max-width: 100%;
+}
+
+.nudge:hover {
 	transform: translateY(-1%) translateX(-1%);
 	box-shadow: 5px 5px #FF6648;
 	cursor: pointer;
@@ -67,7 +70,7 @@ div.contact {
 	margin: 20px auto;
 }
 
-div#lightbox {
+#lightbox {
 	background: rgba(255,255, 255, 0.9);
 	position: fixed;
 	top: 0;
@@ -79,7 +82,7 @@ div#lightbox {
   	display: none;
 }
 
-div#lightbox img {
+#lightbox > * {
 	max-height: 500px;
 	position: absolute;
 	top: 50%;
@@ -106,18 +109,17 @@ footer a {
 @media screen and (max-width: 650px) {
 
 	div.illustration {
-	width: 45%;
+		width: 45%;
 	}
 
 	div.contact {
-	width: 100%;
-	margin: 40px auto;
+		width: 100%;
+		margin: 40px auto;
 	}
 
 	div#full-width {
 		margin: auto 20px 20px 20px;
 	}
-
 }
 
 @media screen and (max-width: 500px) {
@@ -127,16 +129,12 @@ footer a {
 	}
 
 	#illustration {
-	margin: 40px 0 0 0;
+		margin: 40px 0 0 0;
 	}
 
 	.loading img{
-
-	max-width: 280px
-
-
+		max-width: 280px
 	}
-
 }
 
 @media screen and (max-width: 400px) {
@@ -157,11 +155,11 @@ footer a {
 		display: none;
 	}
 
-	img.nudge:hover {
-	-webkit-animation: none;
-	box-shadow: none;
-	cursor: default;
-}
+	.nudge:hover {
+		-webkit-animation: none;
+		box-shadow: none;
+		cursor: default;
+	}
 
 }
 
