@@ -24,6 +24,7 @@ gulp.task('uglifyJS', function() {
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(concat('portfolio.min.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./js/'))
 });
 
@@ -32,6 +33,7 @@ gulp.task('minifyCSS', function() {
     .pipe(sourcemaps.init())
     .pipe(cssnano())
     .pipe(concat('style.min.css'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css/'))
 })
 
