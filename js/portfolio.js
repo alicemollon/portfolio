@@ -6,52 +6,38 @@ $(window).load(function () {
 
 	$('html, body').removeAttr('style');
 
+	// Isotope code
 	$("section#images").isotope({ filter: ".illustration" });
-
-
-	var $section = $('#images').isotope({
-
-	})
 
 	$("nav a").on("click", function () {
 
 		var category = $(this).attr("data-category");
 		$("section#images").isotope({ filter: "div." + category });
 
-
 		return false;
-
 	});
 
-	$(".reset").on("click", function () {
+}); // End of window load
 
-	$("section#images").isotope({ filter: "*" });
+$(document).ready(function() {
 
-	$("nav a#illustration").fadeOut();
+	//  Lightbox code
+	$(".illustration .nudge").on("click", function () {
 
-	return false;
+		$("div#lightbox").fadeIn(250);
 
+		var illustration = $(this).clone().removeClass('nudge')
+
+		$("div#lightbox").html(illustration);
 	});
 
-		
-
-
-
-$("div.illustration img").on("click", function () {
-
-	$("div#lightbox").fadeIn(250);
-
-	var imageSrc = $(this).attr("src");
-
-	$("div#lightbox img").attr("src", imageSrc); 
-
+	$("div#lightbox").on("click", function () {
+		$("div#lightbox").fadeOut(250);
 	});
 
-$("div#lightbox").on("click", function () {
-	$("div#lightbox").fadeOut(250);
-});
+}); // End of Doc ready should be used for rest of code
 
-});
+
 
 
 
