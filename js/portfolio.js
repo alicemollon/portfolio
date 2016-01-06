@@ -6,13 +6,13 @@ $(window).load(function () {
 
 	$('html, body').removeAttr('style');
 
-	$("section#images").isotope({ filter: ".illustration" });
-
+}); // End of window load should only be used for loading
 
 	var $section = $('#images').isotope({
 $(document).ready(function() {
 
-	})
+	// Isotope code
+	$("section#images").isotope({ filter: ".illustration" });
 
 	$("nav a").on("click", function () {
 
