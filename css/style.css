@@ -1,6 +1,7 @@
 .progress {
 	display: inline-block;
 	position: absolute;
+	width: 100%;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -22,7 +23,7 @@
 	position: relative;
 	background: url('../images/pencil.png');
 	display: block;
-	width: 400px;
+	max-width: 400px;
 	height:50px;
 	z-index: 30;
 	background-size: contain;
