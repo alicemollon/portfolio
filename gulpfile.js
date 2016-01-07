@@ -3,6 +3,7 @@ var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
+var browserSync = require('browser-sync').create();
 
 var cssFiles = [
   './css/reset.css',
@@ -28,6 +29,8 @@ gulp.task('uglifyJS', function() {
     .pipe(gulp.dest('./js/'))
 });
 
+gulp.task('jsWatch', ['uglifyJS'], browserSync.reload);
+
 gulp.task('minifyCSS', function() {
   return gulp.src(cssFiles)
     .pipe(sourcemaps.init())
@@ -35,6 +38,16 @@ gulp.task('minifyCSS', function() {
     .pipe(concat('style.min.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css/'))
-})
+    .pipe(browserSync.stream());
+});
 
-gulp.task('default', ['minifyCSS', 'uglifyJS']);
+gulp.task('serve', ['minifyCSS', 'uglifyJS'], function() {
+    browserSync.init({
+      server: { baseDir: './' }
+    });
+
+    gulp.watch(cssFiles, ['minifyCSS']);
+    gulp.watch(jsFiles, ['jsWatch']);
+});
+
+gulp.task('default', ['serve']);
