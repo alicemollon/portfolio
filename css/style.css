@@ -1,12 +1,12 @@
 .progress {
 	display: inline-block;
 	position: absolute;
-	width: 100%;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: #FFF0BF;
 	z-index: 10;
+	margin: 0 10px;
 }
 
 .progress__amount {
@@ -21,12 +21,9 @@
 
 .pencil {
 	position: relative;
-	background: url('../images/pencil.png');
-	display: block;
-	max-width: 400px;
-	height:50px;
 	z-index: 30;
-	background-size: contain;
+	max-width: 400px;
+	width: 100%;
 }
 
 header {
@@ -154,6 +151,13 @@ footer a {
 }
 
 @media screen and (max-width: 400px) {
+
+	.progress {
+		position: relative;
+		left: 0;
+		transform: none;
+		margin: 0 10px;
+	}
 
 	div.illustration {
 		width: 95%;
