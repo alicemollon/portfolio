@@ -1,3 +1,31 @@
+.progress {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #FFF0BF;
+	z-index: 10;
+	margin: 0 10px;
+}
+
+.progress__amount {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #FFE27F;
+	z-index: 20;
+}
+
+.pencil {
+	position: relative;
+	z-index: 30;
+	max-width: 400px;
+	width: 100%;
+}
+
 header {
 	text-align: center;
 	margin: 60px 0 0 0;
@@ -19,7 +47,12 @@ nav img {
 #images {
 	margin: 60px auto;
 	max-width: 960px;
+	position: relative;
+}
+
+.work {
 	opacity: 0;
+	z-index: 1;
 }
 
 video {
@@ -115,13 +148,16 @@ footer a {
 	#illustration {
 		margin: 40px 0 0 0;
 	}
-
-	.loading img{
-		max-width: 280px
-	}
 }
 
 @media screen and (max-width: 400px) {
+
+	.progress {
+		position: relative;
+		left: 0;
+		transform: none;
+		margin: 0 10px;
+	}
 
 	div.illustration {
 		width: 95%;
