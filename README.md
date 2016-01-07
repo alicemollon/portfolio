@@ -22,6 +22,8 @@ Once that is installed you can install the gulp setup for your project, head to 
 **Run gulp**
 Once npm has installed everything you can now run gulp in your project. To do this its really easy just run `gulp`, if every goes well you should see some text in your terminal saying things are starting and finishing, these are the gulp tasks.
 
+This default task will also open your site in the browser and start watching all your files for any changes and then push them automatically to the browser. This means that when you update css or js it will automatically compile them to the minified versions and refresh your browser automagically!
+
 **gulpfile.js**
 Your gulp tasks are created in the file named `gulpfile.js`, a quick overview of what is going on here, first off its important to know it is just a javascript file, so all the code is js.
 
@@ -36,6 +38,12 @@ This is where the fun happens, there are 3 tasks the first `uglifyJS` grabs all 
 
 The `minifyCSS` task does pretty much the same thing as the js task but instead of using `uglify` it uses the `cssnano` plugin.
 
-The final task `default`, just runs both the `uglifyJS`, `minifyCSS` the default keyword is a special one in gulp and it means that instead of having to run `gulp default` in the terminal you can juts run `gulp`, this will run the `default` task which runs the other two tasks.
+The `jsWatch` task, watches the js task and when its finished makes the browser reload.
+
+`serve`, simply starts browsersync and then watches for if any of the other tasks run and will then update the browser automtically
+
+The final task `default`, just runs both the `serve` task that in turn runs & watches the `uglifyJS`, `minifyCSS` tasks.
+
+The default keyword is a special one in gulp and it means that instead of having to run `gulp default` in the terminal you can juts run `gulp`, this will run the `default` task which runs the other two tasks.
 
 And thats all! Have fun!
