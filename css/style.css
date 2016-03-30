@@ -1,186 +1,266 @@
-.progress {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: #FFF0BF;
-	z-index: 10;
-	margin: 0 10px;
-}
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
-.progress__amount {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 100%;
-	background-color: #FFE27F;
-	z-index: 20;
-}
+html {
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
-.pencil {
-	position: relative;
-	z-index: 30;
-	max-width: 400px;
-	width: 100%;
-}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-header {
-	text-align: center;
-	margin: 60px 0 0 0;
-}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #Fff;
+  z-index: 10;
+  height: 100%;
+  width: 100%; }
+
+.balls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 30; }
+
+.ball-1, .ball-2, .ball-3 {
+  display: inline-block;
+  margin: auto 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  -webkit-animation: loading 0.5s infinite ease-in-out alternate;
+  -moz-animation: loading 0.5s infinite ease-in-out alternate; }
+
+.ball-1 {
+  background-color: #F54D0D;}
+
+.ball-2 {
+  background-color: #FECE53;
+  -webkit-animation-delay: 0.25s; }
+
+.ball-3 {
+  background-color: #779FFF;
+ -webkit-animation-delay: 0.5s; }
+
+@-webkit-keyframes loading {
+  0% {-webkit-transform: translateY(0%);}
+  100% {-webkit-transform: translateY(-90%);} }
+
+section.container {
+  margin: 50px 50px 0px 50px;
+  height: 80px; }
 
 h1 img {
-	max-width: 200px;
-}
+  width: 200px;
+  float: left; }
 
-nav img {
-	margin: 40px 10px 0 10px;
-	max-width: 120px;
-}
+.trigger {
+  display: none; }
 
-#illustration {
-	margin: 0 30px 0 0;
-}
+nav {
+  float: right;
+  margin-top: 6px; }
 
-#images {
-	margin: 60px auto;
-	max-width: 960px;
-	position: relative;
-}
+nav a, .button a, footer a, .overlay .title, .title-design {
+  text-decoration: none;
+  font-family: karla, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px; }
 
-.work {
-	opacity: 0;
-	z-index: 1;
-}
+.button a {
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 2px rgba(6, 34, 45, 0.1) solid;
+  background-color: rgba(6, 34, 45, 0.1);
+  color: rgba(6, 34, 45, 0.5); }
 
-video {
-	max-width: 100%;
-}
+.button a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px rgba(255, 255, 255, 0.1) solid;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s; }
 
-.nudge:hover {
-	transform: translateY(-1%) translateX(-1%);
-	box-shadow: 5px 5px #FF6648;
-	cursor: pointer;
-}
+.button {
+  margin-top: 60px; }
+
+.button, .overlay .title, .title-design, footer  {
+  text-align: center; }
 
 nav a {
-	text-decoration: none;
-}
+  color: #07222d;
+  margin: 0 0 0 30px; }
 
 
-div.illustration {
-	width: 30%;
-	margin: 0 10px 20px 10px;
-}
+nav a:hover, footer a  {
+  color: #f24e22;
+  background: url("../img/squiggle.png") repeat-x 100% 100%;
+  background-size: 100px;
+  padding-bottom: 10px; }
 
-div.design img{
-	width: 100%;
-}
+html, body, .grid {
+  width: 100%; }
 
-/*div#full-width  {
-	margin: auto 20px 60px 20px;
-}*/
+.grid {
+  margin: 0 -8px; }
 
-div.contact {
-	width: 100%;
-	margin: 20px auto;
-}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
 
-#lightbox {
-	background: rgba(255,255, 255, 0.9);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	z-index: 20;
-  display: none;
-}
+.grid-sizer, .item {
+  width: 25%; }
 
-#lightbox > * {
-	max-height: 500px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+.item {
+  float: left;
+  -webkit-transition: left .2s ease-in-out, top .3s ease-in-out .3s;
+  -moz-transition: left .3s ease-in-out, top .3s ease-in-out .3s;
+  -ms-transition: left .3s ease-in-out, top .3s ease-in-out .3s;
+  -o-transition: left .3s ease-in-out, top .3s ease-in-out .3s;
+  transition: left .3s ease-in-out, top .3s ease-in-out .3s; }
 
+.item:hover {
+  cursor: pointer; }
+
+.design {
+  width: 50%; }
+
+.item img {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0; }
+
+.overlay .title {
+  font-weight: 400;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.design-description {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto 100px 30px 100px; }
+
+
+.title-design  {
+  font-weight: 400;
+  font-size: 16px; }
+
+.description, footer {
+  font-family: karla, sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 30px; }
+
+.item:hover .overlay {
+  display: block;
+  opacity: 1;
+  transition: all 0.5s; }
+
+
+em {
+  font-style: normal;
+  font-weight: 700;
+  background: url("../img/white-squiggle.png") repeat-x 100% 100%;
+  background-size: 80px;
+  padding-bottom: 8px; }
 
 footer {
-	margin: 40px auto 60px auto;
-	text-align: center;
-}
+  margin: 80px;
+  font-weight: 700;
+  color: #07222d; }
 
-footer img {
-	max-width: 30px;
-	margin: 0 10px;
-}
+footer p {
+  margin-bottom: 30px; }
 
-footer a {
-	text-decoration: none;
-}
+@media screen and (max-width: 1080px) {
 
-@media screen and (max-width: 650px) {
-
-	div.illustration {
-		width: 45%;
-	}
-
-	div.contact {
-		width: 100%;
-		margin: 40px auto;
-	}
-
-	div#full-width {
-		margin: auto 20px 20px 20px;
-	}
-}
-
-@media screen and (max-width: 500px) {
-
-	nav a {
-		display: block;
-	}
-
-	#illustration {
-		margin: 40px 0 0 0;
-	}
-}
-
-@media screen and (max-width: 400px) {
-
-	.progress {
-		position: relative;
-		left: 0;
-		transform: none;
-		margin: 0 10px;
-	}
-
-	div.illustration {
-		width: 95%;
-	}
-
-	h1 {
-		padding: 0 20px;
-	}
-
-	nav {
-		margin: 20px auto auto auto;
-	}
-
-	div#lightbox {
-		display: none;
-	}
-
-	.nudge:hover {
-		box-shadow: none;
-		cursor: default;
-	}
+  .design-description {
+    margin: auto 55px; }
 
 }
 
+@media screen and (max-width: 870px) {
 
+  .grid-sizer, .item {
+    width: 50%; }
+
+  .design {
+    width: 100%; }
+
+  section.container {
+    margin: 30px 30px 0px 30px;
+    height: 60px; }
+
+  h1 img {
+    width: 150px; }
+
+}
+
+@media screen and (max-width: 670px) {
+
+  section.container {
+    margin: 20px 0px 0px -10px;
+    height: 50px; }
+
+  h1 img {
+    width: 120px;
+    float: none; }
+
+  h1 {
+    display: block;
+    text-align: center; }
+
+  nav a {
+    display: block;
+    margin: auto 0;
+    padding: 10px;
+    text-align: center; }
+
+  nav a:hover  {
+    background: none;
+    padding-bottom: 10px; }
+
+  nav {
+      display: none;
+      float: none;
+      text-align: center;
+      padding: 0 0 20px 0;
+      margin-top: 0;
+      z-index: 10;
+      position: relative;
+      background-color: #fff;
+      width: 100%; }
+
+  .trigger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px; }
+
+  .trigger img {
+    width: 20px; }
+
+  .logo {
+    max-width: 250px; }
+}
 
