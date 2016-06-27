@@ -10,7 +10,7 @@ $(document).ready(function() {
 		isAnimated: !Modernizr.csstransitions
 	});
 		
-		$('.loader').delay(2000).fadeOut(900, function() {
+		$('.loader').delay(1300).fadeOut(700, function() {
 			is.isotope('layout');
 			is.fadeTo(2000, 1);
 		});

@@ -26,6 +26,7 @@ html {
   z-index: 30; }
 
 .ball-1, .ball-2, .ball-3 {
+  background-color: #F54D0D;
   display: inline-block;
   margin: auto 8px;
   height: 12px;
@@ -34,15 +35,10 @@ html {
   -webkit-animation: loading 0.5s infinite ease-in-out alternate;
   -moz-animation: loading 0.5s infinite ease-in-out alternate; }
 
-.ball-1 {
-  background-color: #F54D0D;}
-
 .ball-2 {
-  background-color: #FECE53;
   -webkit-animation-delay: 0.25s; }
 
 .ball-3 {
-  background-color: #779FFF;
  -webkit-animation-delay: 0.5s; }
 
 @-webkit-keyframes loading {
@@ -168,7 +164,7 @@ html, body, .grid {
   font-family: karla, sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px; }
 
 .item:hover .overlay {
@@ -181,8 +177,8 @@ em {
   font-style: normal;
   font-weight: 700;
   background: url("../img/white-squiggle.png") repeat-x 100% 100%;
-  background-size: 80px;
-  padding-bottom: 8px; }
+  background-size: 121px;
+  padding-bottom: 10px; }
 
 footer {
   margin: 80px;
