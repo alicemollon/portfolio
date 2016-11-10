@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300);
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300');
+
 
 html {
   overflow-y: scroll;
@@ -60,7 +63,7 @@ nav {
   float: right;
   margin-top: 6px; }
 
-nav a, .button a, footer a, .overlay .title, .title-design {
+nav a, .design-description a, footer a, .overlay .title, .title-design {
   text-decoration: none;
   font-family: karla, sans-serif;
   font-weight: 700;
@@ -68,29 +71,19 @@ nav a, .button a, footer a, .overlay .title, .title-design {
   text-transform: uppercase;
   font-size: 13px; }
 
-.button a {
-  border-radius: 50px;
-  padding: 15px 30px;
-  border: 2px rgba(6, 34, 45, 0.1) solid;
-  background-color: rgba(6, 34, 45, 0.1);
-  color: rgba(6, 34, 45, 0.5); }
+.design-description a {
+  color: rgba(6, 34, 45, 0.5);}
 
-.button a:hover {
+.design-description a:hover {
   color: rgba(255, 255, 255, 0.8);
-  border: 2px rgba(255, 255, 255, 0.1) solid;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.5s; }
+  background: url("../img/white-squiggle.png") repeat-x 100% 100%;
+  background-size: 100px;
+  padding-bottom: 10px;}
 
-.button {
-  margin-top: 60px; }
-
-.button, .overlay .title, .title-design, footer  {
-  text-align: center; }
 
 nav a {
   color: #07222d;
   margin: 0 0 0 30px; }
-
 
 nav a:hover, footer a  {
   color: #f24e22;
@@ -144,27 +137,31 @@ html, body, .grid {
 .overlay .title {
   font-weight: 400;
   font-size: 16px;
+  text-align: left;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%); }
 
+
 .design-description {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin: auto 100px 30px 100px; }
+  margin: auto 100px; }
 
 
 .title-design  {
   font-weight: 400;
-  font-size: 16px; }
+  font-size: 16px; 
+  text-align: left;
+}
 
 .description, footer {
-  font-family: karla, sans-serif;
-  font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px; }
 
 .item:hover .overlay {
@@ -172,18 +169,11 @@ html, body, .grid {
   opacity: 1;
   transition: all 0.5s; }
 
-
-em {
-  font-style: normal;
-  font-weight: 700;
-  background: url("../img/white-squiggle.png") repeat-x 100% 100%;
-  background-size: 121px;
-  padding-bottom: 10px; }
-
 footer {
   margin: 80px;
   font-weight: 700;
-  color: #07222d; }
+  color: #07222d; 
+  text-align: center; }
 
 footer p {
   margin-bottom: 30px; }
@@ -191,8 +181,7 @@ footer p {
 @media screen and (max-width: 1080px) {
 
   .design-description {
-    margin: auto 55px; }
-
+  margin: auto 100px;}
 }
 
 @media screen and (max-width: 870px) {
@@ -213,6 +202,9 @@ footer p {
 }
 
 @media screen and (max-width: 670px) {
+
+  .design-description {
+  margin: auto 50px;}
 
   section.container {
     margin: 20px 0px 0px -10px;
