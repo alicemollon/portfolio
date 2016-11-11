@@ -171,7 +171,6 @@ html, body, .grid {
 
 footer {
   margin: 80px;
-  font-weight: 700;
   color: #07222d; 
   text-align: center; }
 
@@ -233,7 +232,7 @@ footer p {
       float: none;
       text-align: center;
       padding: 0 0 20px 0;
-      margin-top: 0;
+      margin-top: -2px;
       z-index: 10;
       position: relative;
       background-color: #fff;
