@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Rubik:300);
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
 
 
 html {
@@ -65,7 +64,7 @@ nav {
 
 nav a, .design-description a, footer a, .overlay .title, .title-design {
   text-decoration: none;
-  font-family: karla, sans-serif;
+  font-family: quicksand, sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -135,8 +134,6 @@ html, body, .grid {
   opacity: 0; }
 
 .overlay .title {
-  font-weight: 400;
-  font-size: 16px;
   text-align: left;
   position: absolute;
   top: 50%;
@@ -152,14 +149,12 @@ html, body, .grid {
 
 
 .title-design  {
-  font-weight: 400;
-  font-size: 16px; 
   text-align: left;
 }
 
 .description, footer {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 200;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
   letter-spacing: 2px;
   font-size: 14px;
   line-height: 30px; }
