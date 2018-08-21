@@ -70,6 +70,14 @@ nav a, .design-description a, footer a, .overlay .title, .title-design, h4 {
   text-transform: uppercase;
   font-size: 13px; }
 
+.client {
+  margin-left: 20px;
+  font-size: 11px;
+   letter-spacing: 3px;
+  text-transform: uppercase;
+
+}
+
 nav a {
   color: #07222d;
   margin: 0 0 0 30px; }
