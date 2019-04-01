@@ -82,11 +82,12 @@ nav a {
   color: #07222d;
   margin: 0 0 0 30px; }
 
-nav a:hover, footer a  {
+nav a:hover, footer a, h3 a, p a:hover  {
   color: #f24e22;
   background: url("../img/squiggle.png") repeat-x 100% 100%;
-  background-size: 170px;
-  padding-bottom: 10px; }
+  background-size: 180px;
+  padding-bottom: 8px;
+  font-weight: 700; }
 
 html, body, .grid {
   width: 100%; }
@@ -185,7 +186,8 @@ section.about, section.clients-features {
   }
 
   p a {
- color: #07222d;
+  color: #f24e22;
+  text-decoration: none;
   }
 
 footer {
@@ -195,6 +197,13 @@ footer {
 
 footer p {
   margin-bottom: 30px; }
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 @media screen and (max-width: 1080px) {
 
