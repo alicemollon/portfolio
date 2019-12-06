@@ -80,11 +80,11 @@ nav a, .design-description a, footer a, .overlay .title, .title-design, h4 {
 
 }
 
-nav a {
+nav a, footer a {
   color: #07222d;
   margin: 0 0 0 30px; }
 
-nav a:hover, footer a, h3 a, p a:hover  {
+nav a:hover, footer a:hover, p a:hover  {
   color: #f24e22;
   background: url("../img/squiggle.png") repeat-x 100% 100%;
   background-size: 180px;
