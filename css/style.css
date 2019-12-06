@@ -80,9 +80,13 @@ nav a, .design-description a, footer a, .overlay .title, .title-design, h4 {
 
 }
 
-nav a, footer a {
+nav a {
   color: #07222d;
   margin: 0 0 0 30px; }
+
+footer a {
+    color: #07222d;
+}
 
 nav a:hover, footer a:hover, p a:hover  {
   color: #f24e22;
