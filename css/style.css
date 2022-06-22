@@ -89,7 +89,7 @@ nav a {
 
 }*/
 
-nav a:hover, /*footer a:hover,*/ p a:hover  {
+nav a:hover, /*footer a:hover,*/ p a:hover {
   color: #f24e22;
   background: url("../img/squiggle.svg") repeat-x 100% 100%;
   background-size: 180px;
@@ -189,11 +189,13 @@ section.about, section.clients-features {
     font-weight: 400;
   }
 
+
+
   h4 {
     margin-top: 40px;
   }
 
-  p a {
+  p a, h3 a {
   color: #f24e22;
   text-decoration: none;
   }
